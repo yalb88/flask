@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="jumbotron text-center">
+
+<h3>Endüstri Mühendisliği Bloguma Hoşgeldiniz</h3>
+<p> elişme Aşaması:Ortaya çıkan fikrin teknik </p>
+
+
+
+</div>
+<ul>
+    {% for article in articles %}
+        <li> Article Id: {{article.id}} - Title {{article.title}} - Content: {{article.content}} </li>
+    {% endfor %}
+
+{% if islem == "1" %}
+<p> 1.islem</p>
+{% elif islem == "2" %}
+<p> 2.islem</p>
+{% else %}
+<p> Geçersiz işlem </p>
+{% endif %}
+
+{% endblock body %}
+
